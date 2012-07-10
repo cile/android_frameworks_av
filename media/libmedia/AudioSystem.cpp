@@ -756,8 +756,8 @@ void AudioSystem::AudioPolicyServiceClient::binderDied(const wp<IBinder>& who) {
 #ifdef USE_SAMSUNG_SEPARATEDSTREAM
 extern "C" bool _ZN7android11AudioSystem17isSeparatedStreamE19audio_stream_type_t(audio_stream_type_t stream)
 {
-    LOGD("android::AudioSystem::isSeparatedStream(audio_stream_type_t) called!");
-    LOGD("audio_stream_type_t: %d", stream);
+    ALOGD("android::AudioSystem::isSeparatedStream(audio_stream_type_t) called!");
+    ALOGD("audio_stream_type_t: %d", stream);
 
 /* this is the correct implementation, but breaks headset volume rocker.
     if (stream == 3  || stream == 9  || stream == 10
@@ -768,7 +768,7 @@ extern "C" bool _ZN7android11AudioSystem17isSeparatedStreamE19audio_stream_type_
     }
 */
 
-    LOGD("isSeparatedStream: false");
+    ALOGD("isSeparatedStream: false");
     return false;
 }
 #endif // USE_SAMSUNG_SEPARATEDSTREAM
